@@ -17,7 +17,12 @@ C / C++ 編譯工具 CMake 練習專案。
     - [Visual Studio - compile at remote server](/app/vs-win-cmake-ssh)
 
 + [CMake demo code](/demo)
-    - ```./run.sh executable```：[code](/demo/src/executable)，[reference : add_executable](https://cmake.org/cmake/help/latest/command/add_executable.html)
+    - ```./run.sh executable```：[code](/demo/src/executable)，設定可執行檔
+        + [reference : add_executable](https://cmake.org/cmake/help/latest/command/add_executable.html)
+    - ```./run.sh info```：[code](/demo/src/info)，輸出訊息與設定變數
+        + [reference : message](https://cmake.org/cmake/help/latest/command/message.html)
+        + [reference : set](https://cmake.org/cmake/help/latest/command/set.html)
+        + [reference : cmake-variables](https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html)，CMake 系統提供變數
 
 ## 文獻探討
 
