@@ -1,0 +1,16 @@
+# Declare cmake information
+cmake_minimum_required(VERSION 3.13.4)
+project(exec VERSION 1.2.3.0 HOMEPAGE_URL https://cmake.org/ LANGUAGES CXX)
+
+# Show cmake infromation
+message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
+message("PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
+message("PROJECT_BINARY_DIR = ${PROJECT_BINARY_DIR}")
+message("exec_SOURCE_DIR = ${exec_SOURCE_DIR}")
+message("exec_BINARY_DIR = ${exec_BINARY_DIR}")
+message("PROJECT_VERSION = ${PROJECT_VERSION}")
+message("PROJECT_VERSION_MAJOR = ${PROJECT_VERSION_MAJOR}")
+message("PROJECT_VERSION_MINOR = ${PROJECT_VERSION_MINOR}")
+message("PROJECT_VERSION_PATCH = ${PROJECT_VERSION_PATCH}")
+message("PROJECT_VERSION_TWEAK = ${PROJECT_VERSION_TWEAK}")
+message("PROJECT_HOMEPAGE_URL = ${PROJECT_HOMEPAGE_URL}")
