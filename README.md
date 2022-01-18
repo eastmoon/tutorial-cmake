@@ -9,6 +9,11 @@ C / C++ 編譯工具 CMake 練習專案。
 
 ## 目錄
 
++ CMake Project
+    - [Visual Studio - compile at Windows OS](/app/vs-win-cmake-win)
+    - [Visual Studio - compile at WSL virtual machine](/app/vs-win-cmake-wsl)
+    - [Visual Studio - compile at remote server](/app/vs-win-cmake-ssh)
+
 ## 文獻探討
 
 ### CMake 簡介
@@ -104,8 +109,7 @@ ldd ./publish/bin/Application
             - [編譯器(Compiler)與連結器(Linker)的運作原理](https://rexpighj123.pixnet.net/blog/post/207609288)
             - [Compiling, linking, Makefile, header files](https://gribblelab.org/teaching/CBootCamp/12_Compiling_linking_Makefile_header_files.html)
             - [Libraries in C++](https://www.oracle.com/technical-resources/articles/it-infrastructure/dev-linkinglibraries5.html)      
-
-    - Compiler libraray
++ Compiler libraray
     - [configure、 make、 make install 背后的原理(翻译)](https://zhuanlan.zhihu.com/p/77813702)
         + configure：原始碼編譯設定
         + make：依循 configure 執行編譯，並產生二進制檔案
