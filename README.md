@@ -16,6 +16,9 @@ C / C++ 編譯工具 CMake 練習專案。
     - [Visual Studio - compile at WSL virtual machine](/app/vs-win-cmake-wsl)
     - [Visual Studio - compile at remote server](/app/vs-win-cmake-ssh)
 
++ [CMake demo code](/demo)
+    - [add_executable](https://cmake.org/cmake/help/latest/command/add_executable.html)，```./run.sh executable```
+
 ## 文獻探討
 
 ### CMake 簡介
