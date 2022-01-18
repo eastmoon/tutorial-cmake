@@ -91,6 +91,8 @@ ldd ./publish/bin/Application
     - [CMake 入門/建置與連結程式庫](https://zh.m.wikibooks.org/zh-tw/CMake_%E5%85%A5%E9%96%80/%E5%BB%BA%E7%BD%AE%E8%88%87%E9%80%A3%E7%B5%90%E7%A8%8B%E5%BC%8F%E5%BA%AB)
     + [CMake學習筆記（一）基本概念介紹、入門教程及CLion安裝配置](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/712067/)
     + [CMake 常用指令](https://www.cntofu.com/book/46/cmake/cmake_chang_yong_zhi_ling.md)
+    + [CMake 教學](https://ithelp.ithome.com.tw/articles/10221101)
+    + [CMake 教程文獻](https://sfumecjf.github.io/cmake-examples-Chinese/01-basic/)
 + C++ 編譯結構
     - Cross Compile
         + 議題
