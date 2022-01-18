@@ -15,6 +15,17 @@
     └ lib
     └ test
 ```
+## 操作流程
+
++ 使用 vcpkg 安裝第三方相依
+
+```
+install
+```
+
++ 使用 Visual Studio 開啟專案 CMakeApp
+
++ 執行編譯專案
 
 ## 參考
 
