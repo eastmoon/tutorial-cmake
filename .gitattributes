@@ -9,3 +9,4 @@
 *.h     eol=lf
 *.hpp   eol=lf
 *.py    eol=lf
+CMakeLists.txt eol=lf
