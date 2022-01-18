@@ -10,6 +10,7 @@ C / C++ 編譯工具 CMake 練習專案。
 ## 目錄
 
 + CMake Project
+    - [GCC - compile at linux server](/app/gcc-linux-cmake)
     - [Visual Studio - compile at Windows OS](/app/vs-win-cmake-win)
     - [Visual Studio - compile at WSL virtual machine](/app/vs-win-cmake-wsl)
     - [Visual Studio - compile at remote server](/app/vs-win-cmake-ssh)
