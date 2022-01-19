@@ -4,6 +4,7 @@ if [ -d ${1} ]; then
     make -C ./${1}/out
     echo ">> Execute example"
     echo ""
-    find ./${1} -name exec -exec {} \;
+    find ./${1} -name "exec" -exec echo {} \; -exec {} \;
+    find ./${1} -name "exec[0-9]" -exec echo {} \; -exec {} \;
     echo ""
 fi

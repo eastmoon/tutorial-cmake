@@ -30,6 +30,14 @@ C / C++ 編譯工具 CMake 練習專案。
         + [reference : include_directories](https://cmake.org/cmake/help/latest/command/include_directories.html)
             - [如何使用CMake正確添加包含目錄](https://ubuntuqa.com/zh-tw/article/9081.html)
             - [CMake之INCLUDE_DIRECTORIES](https://www.jianshu.com/p/9083ecaf03aa)
+                + ```include_directories``` 默認情況是使用 AFTER 來追加到搜尋目標列表
+                + 使用 ```AFTER```、```BEFORE``` 使指對搜尋目標列表追加或插入
+                + 使用 ```SYSTEM``` 則增加的目錄被視為系統路徑，對權限、警告通知會有影響
+    - ```./run.sh global-vs-target-include```：[code](/demo/src/coonfigure)，CMake 依據指令對 include 設定全域 (include_directories) 與可執行目標域 (target_include_directories)
+        + [reference : target_include_directories](https://cmake.org/cmake/help/latest/command/target_include_directories.html)
+        + [What is the difference between include_directories and target_include_directories in CMake?](https://stackoverflow.com/questions/31969547)，[中譯](https://qastack.cn/programming/31969547)
+        + [cmake：target_include_directories、include_directories、add_executable](https://blog.csdn.net/zhizhengguan/article/details/115331314)
+        + 就結論來說，```include_directories``` 是設定給整個 CMakeList.txt 組態的目錄，```target_include_directories``` 是設定給目標 ( project 與 add_executable 所指定的目標 ) 的目錄
 
 ## 文獻探討
 
