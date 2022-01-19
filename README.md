@@ -19,12 +19,16 @@ C / C++ 編譯工具 CMake 練習專案。
 + [CMake demo code](/demo)
     - ```./run.sh project```：[code](/demo/src/project)，設定專案資訊
         + [reference : project](https://cmake.org/cmake/help/latest/command/project.html)
-    - ```./run.sh executable```：[code](/demo/src/executable)，設定可執行檔
+    - ```./run.sh executable```：[code](/demo/src/executable)，設定可執行檔 ( 可執行目標)
         + [reference : add_executable](https://cmake.org/cmake/help/latest/command/add_executable.html)
     - ```./run.sh info```：[code](/demo/src/info)，輸出訊息與設定變數
         + [reference : message](https://cmake.org/cmake/help/latest/command/message.html)
         + [reference : set](https://cmake.org/cmake/help/latest/command/set.html)
         + [reference : cmake-variables](https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html)，CMake 系統提供變數
+    - ```./run.sh filesystem```：[code](/demo/src/filesystem)，檔案與路徑處理系統
+        + [reference : file](https://cmake.org/cmake/help/latest/command/file.html)，檔案管理，部分功能需要 CMake v3.18+
+            - 依據文獻說明，CMake 並不建議用 GLOB 解析來搜尋檔案，主要是因為若 CMakeList 若未修改，而是增加搜尋目標檔案，CMake 快取會因此 CMakeList 未變更而忽略這些增加的目標，導致編譯錯誤
+        + [reference : cmake_path](https://cmake.org/cmake/help/latest/command/cmake_path.html)，需要 CMake v3.20+
     - ```./run.sh configure```：[code](/demo/src/configure)，複製目標檔並替換變數值後，產生指定檔案
         + [reference : configure_file](https://cmake.org/cmake/help/latest/command/configure_file.html)、[CMake的configure_file指令](https://blog.csdn.net/qq_38410730/article/details/103741579)
         + [reference : include_directories](https://cmake.org/cmake/help/latest/command/include_directories.html)
@@ -37,7 +41,7 @@ C / C++ 編譯工具 CMake 練習專案。
         + [reference : target_include_directories](https://cmake.org/cmake/help/latest/command/target_include_directories.html)
         + [What is the difference between include_directories and target_include_directories in CMake?](https://stackoverflow.com/questions/31969547)，[中譯](https://qastack.cn/programming/31969547)
         + [cmake：target_include_directories、include_directories、add_executable](https://blog.csdn.net/zhizhengguan/article/details/115331314)
-        + 就結論來說，```include_directories``` 是設定給整個 CMakeList.txt 組態的目錄，```target_include_directories``` 是設定給目標 ( project 與 add_executable 所指定的目標 ) 的目錄
+        + 依據文獻說明，```include_directories``` 是設定給整個 CMakeList.txt 組態的目錄，```target_include_directories``` 是設定給目標 ( project 與 add_executable 所指定的目標 ) 的目錄
 
 ## 文獻探討
 
@@ -126,7 +130,6 @@ ldd ./publish/bin/Application
         + [Header Files in C/C++](https://data-flair.training/blogs/header-files-in-c-cpp/)
         + [使用 gcc 自製 C/C++ 靜態、共享與動態載入函式庫教學](https://blog.gtwang.org/programming/howto-create-library-using-gcc/)
         + [C and C++ library naming conventions](https://developer.arm.com/documentation/100073/0616/The-Arm-C-and-C---Libraries/C-and-C---library-naming-conventions)
-        + [cmake：target_** 中的 PUBLIC，PRIVATE，INTERFACE](https://zhuanlan.zhihu.com/p/82244559)
     - 編譯架構
         + [The Programming Process](http://www2.hawaii.edu/~takebaya/ics111/process_of_programming/process_of_programming.html)
         + [The C++ Build Process](http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/build.html)
