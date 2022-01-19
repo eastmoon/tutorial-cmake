@@ -42,6 +42,19 @@ C / C++ 編譯工具 CMake 練習專案。
         + [What is the difference between include_directories and target_include_directories in CMake?](https://stackoverflow.com/questions/31969547)，[中譯](https://qastack.cn/programming/31969547)
         + [cmake：target_include_directories、include_directories、add_executable](https://blog.csdn.net/zhizhengguan/article/details/115331314)
         + 依據文獻說明，```include_directories``` 是設定給整個 CMakeList.txt 組態的目錄，```target_include_directories``` 是設定給目標 ( project 與 add_executable 所指定的目標 ) 的目錄
+    - ```./run.sh library```：[code](/demo/src/library)，建立靜態、動態函式庫
+        + [reference : add_library](https://cmake.org/cmake/help/latest/command/add_library.html)
+            - [CMake 入門/建置與連結程式庫](https://zh.m.wikibooks.org/zh-tw/CMake_%E5%85%A5%E9%96%80/%E5%BB%BA%E7%BD%AE%E8%88%87%E9%80%A3%E7%B5%90%E7%A8%8B%E5%BC%8F%E5%BA%AB)
+        + [reference : add_subdirectory](https://cmake.org/cmake/help/latest/command/add_subdirectory.html)
+            - [cmake：add_subdirectory 注意事项](https://zhuanlan.zhihu.com/p/85980099)
+        + Header & Library
+            - [Difference between Header file and Library](https://www.geeksforgeeks.org/difference-header-file-library/)
+            - [What's the difference between a header file and a library?](https://stackoverflow.com/questions/924485/whats-the-difference-between-a-header-file-and-a-library)
+                + The header is a phone number you can call
+                + The library is the actual person you can reach there!
+        + [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
+            - Static library is that it’s code is locked into the final executable file and cannot be modified without a re-compile. In contrast, a dynamic library can be modified without a need to re-compile.
+            - 靜態函式庫是編譯期連結的函式集，編譯完後會合併至可執行檔；動態函式庫是執行期連結的函式集，編譯完後會等待可執行檔執行時才建立連結
 
 ## 文獻探討
 
@@ -112,7 +125,7 @@ ldd ./publish/bin/Application
     + [CGold: The Hitchhiker’s Guide to the CMake](https://cgold.readthedocs.io/en/latest/index.html)
         - [CMake初识](https://zhangyuyu.github.io/cmake-hello/)
     + [CMake 入門/建置執行檔](https://zh.m.wikibooks.org/zh-tw/CMake_%E5%85%A5%E9%96%80/%E5%BB%BA%E7%BD%AE%E5%9F%B7%E8%A1%8C%E6%AA%94)
-    - [CMake 入門/建置與連結程式庫](https://zh.m.wikibooks.org/zh-tw/CMake_%E5%85%A5%E9%96%80/%E5%BB%BA%E7%BD%AE%E8%88%87%E9%80%A3%E7%B5%90%E7%A8%8B%E5%BC%8F%E5%BA%AB)
+        - [CMake 入門/建置與連結程式庫](https://zh.m.wikibooks.org/zh-tw/CMake_%E5%85%A5%E9%96%80/%E5%BB%BA%E7%BD%AE%E8%88%87%E9%80%A3%E7%B5%90%E7%A8%8B%E5%BC%8F%E5%BA%AB)
     + [CMake學習筆記（一）基本概念介紹、入門教程及CLion安裝配置](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/712067/)
     + [CMake 常用指令](https://www.cntofu.com/book/46/cmake/cmake_chang_yong_zhi_ling.md)
     + [CMake 教學](https://ithelp.ithome.com.tw/articles/10221101)
@@ -139,10 +152,11 @@ ldd ./publish/bin/Application
             - [編譯器(Compiler)與連結器(Linker)的運作原理](https://rexpighj123.pixnet.net/blog/post/207609288)
             - [Compiling, linking, Makefile, header files](https://gribblelab.org/teaching/CBootCamp/12_Compiling_linking_Makefile_header_files.html)
             - [Libraries in C++](https://www.oracle.com/technical-resources/articles/it-infrastructure/dev-linkinglibraries5.html)      
-+ Compiler libraray
++ Linux 文獻
     - [configure、 make、 make install 背后的原理(翻译)](https://zhuanlan.zhihu.com/p/77813702)
         + configure：原始碼編譯設定
         + make：依循 configure 執行編譯，並產生二進制檔案
         + make install：依循 configure 將編譯輸出內容複製至設定的檔案目錄
         + 參考
             - [linux下如何使用configure/make/make install命令編譯安裝解除安裝程式](https://www.itread01.com/content/1545059522.html)
+    - [Linux 工具參考篇](https://www.cntofu.com/book/46/linux_tools/ref_tool.md)
