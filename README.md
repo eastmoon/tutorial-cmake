@@ -5,8 +5,6 @@ C / C++ 編譯工具 CMake 練習專案。
 **『CMake是個一個開源的跨平台自動化建構系統，用來管理軟體建置的程式，並不依賴於某特定編譯器，並可支援多層目錄、多個應用程式與多個函式庫。』**
 > From [CMake wiki](https://zh.wikipedia.org/wiki/CMake)
 
-## 指令
-
 ## 目錄
 
 + CMake Project
@@ -55,6 +53,14 @@ C / C++ 編譯工具 CMake 練習專案。
         + [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
             - Static library is that it’s code is locked into the final executable file and cannot be modified without a re-compile. In contrast, a dynamic library can be modified without a need to re-compile.
             - 靜態函式庫是編譯期連結的函式集，編譯完後會合併至可執行檔；動態函式庫是執行期連結的函式集，編譯完後會等待可執行檔執行時才建立連結
+    - ```./run.sh inheritance```：[code](/demo/src/inheritance)，CMake 在目標 include、libraries 中的 Public、Private、Interface 特性
+        + [CMake: Public VS Private VS Interface](https://leimao.github.io/blog/CMake-Public-Private-Interface/)
+        + [Modern CMake is like inheritance](https://kubasejdak.com/modern-cmake-is-like-inheritance)
+        + [cmake：target_** 中的 PUBLIC，PRIVATE，INTERFACE](https://zhuanlan.zhihu.com/p/82244559)
+        + 依據文獻說明，CMake 在編譯可執行目標時，會依據設定導入必要的標頭檔 ( Header file in includes directories )、函式庫 ( Library file in libraries directories )，因此，最終編譯的可執行檔，除了會包括必要的程式碼外，也會繼承標頭檔、函式庫的關係性。
+            - Public，目標指定的目錄為公開，則相依此目標的皆可使用此目錄內容
+            - Private，目標指定的目錄為私有，則僅有此目標可使用此目錄內容
+            - INTERFACE，目標指定的目錄為介面，則當前目標並不會使用此目錄內容，但相依此目標的皆可使用此目錄內容
 
 ## 文獻探討
 
