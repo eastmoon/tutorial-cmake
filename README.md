@@ -25,7 +25,7 @@ C / C++ 編譯工具 CMake 練習專案。
         + [reference : message](https://cmake.org/cmake/help/latest/command/message.html)
         + [reference : set](https://cmake.org/cmake/help/latest/command/set.html)
         + [reference : cmake-variables](https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html)，CMake 系統提供變數
-    - ```./run.sh coonfigure```：[code](/demo/src/coonfigure)，複製目標檔並替換變數值後，產生指定檔案
+    - ```./run.sh configure```：[code](/demo/src/configure)，複製目標檔並替換變數值後，產生指定檔案
         + [reference : configure_file](https://cmake.org/cmake/help/latest/command/configure_file.html)、[CMake的configure_file指令](https://blog.csdn.net/qq_38410730/article/details/103741579)
         + [reference : include_directories](https://cmake.org/cmake/help/latest/command/include_directories.html)
             - [如何使用CMake正確添加包含目錄](https://ubuntuqa.com/zh-tw/article/9081.html)
