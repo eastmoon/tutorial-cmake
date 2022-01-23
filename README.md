@@ -74,6 +74,14 @@ C / C++ 編譯工具 CMake 練習專案。
             - [CMake Copying imported libs](https://cmake.org/pipermail/cmake/2013-July/055207.html)
         + [reference : foreach](https://cmake.org/cmake/help/latest/command/foreach.html)、[reference : if](https://cmake.org/cmake/help/latest/command/if.html)，應用此文獻設計複雜條件與迴圈的邏輯處理
         + 由於 find_package 搜尋回來的函式庫有可能為 [Symbolic link](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/)，因此在透過 [CMake file COPY](https://cmake.org/cmake/help/latest/command/file.html#copy) 需額外使用 ```FOLLOW_SYMLINK_CHAIN``` 指令來複製到正確的動態連結函式庫；然而此指令僅適用 CMake 3.15+，當前範例並不滿足，因此利用 [CMake file GLOB](https://cmake.org/cmake/help/latest/command/file.html#glob) 將目標函式庫搜尋後複製；但此部分需注意，由於這設計是基於檔案命名結構來搜尋，並非正式的作法，最適當方式仍是依據 Symbolic link 指向的目標進行正確的複製
+    - ```./run.sh 3party-integrate-library```：[code](/demo/src/3party-integrate-library)，基於 [Standalone Application](https://medium.com/swlh/1764fd1f8a0c) 與 [模組化](https://zh.wikipedia.org/wiki/%E6%A8%A1%E7%B5%84%E5%8C%96%E8%A8%AD%E8%A8%88) 設計前提，將 [Header-Only](https://en.wikipedia.org/wiki/Header-only) 函式庫封裝於自訂義的動態連結庫，便於軟體安裝時將必要引用庫匯入
+        + 測試執行 ```standalone.bat```，啟動輕量 Linux 並複製函式庫後執行應用程式
+        + Header-Only issue
+            - [C++ header-only libraries are bad](https://schneide.blog/2018/04/30/c-header-only-libraries-are-bad/)
+            - [Benefits of header-only libraries](https://stackoverflow.com/questions/12671383)
+            - Header-Only 函式庫其結構簡單，且開發環境無須額外編譯動態連結庫；但其缺點是函式庫不易閱讀、會以 inline 方式合併入可執行檔。
+        + 實驗用自訂義動態函式庫，並以模組方式提供函數供給主程式使用，確保 Header-Only 函式庫被自訂義動態函式庫封裝
+        + 此設計概念如 [Domain Driven Design](https://zh.wikipedia.org/wiki/%E9%A0%98%E5%9F%9F%E9%A9%85%E5%8B%95%E8%A8%AD%E8%A8%88) 中的 Repository，將對 Header-Only 函式庫的應用與操作封裝
 
 ## 文獻探討
 
