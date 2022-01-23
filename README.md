@@ -61,6 +61,14 @@ C / C++ 編譯工具 CMake 練習專案。
             - Public，目標指定的目錄為公開，則相依此目標的皆可使用此目錄內容
             - Private，目標指定的目錄為私有，則僅有此目標可使用此目錄內容
             - INTERFACE，目標指定的目錄為介面，則當前目標並不會使用此目錄內容，但相依此目標的皆可使用此目錄內容
+    - ```./run.sh find-package```：[code](/demo/src/find-package)，CMake 基於現有設定目錄搜尋存在的函式庫
+        + [reference : find_package](https://cmake.org/cmake/help/latest/command/find_package.html)
+        + [Cmake之深入理解find_package()的用法](https://zhuanlan.zhihu.com/p/97369704)
+        + [“轻松搞定CMake”系列之find_package用法详解](https://blog.csdn.net/zhanghm1995/article/details/105466372)
+        + [CMake find_package 使用](https://seanzhengw.github.io/blog/cmake/2018/04/23/cmake-find-package.html)
+        + 依據文獻來看，搜尋找的是存在動態連結函式庫指定目錄的 Package，例如 Boost 在對應目錄下的 ```/usr/local/lib/boost```，並可以利用 COMPONENTS 來搜尋 Package 下的元件庫，例如 Boost 的 system 在對應目錄下的 ```/usr/local/lib/boost/libboost_system.so```，但需注意若指定的函式庫為 header-only 則因不存在 ```.so``` 或 ```.a``` 因此無法搜尋。
+        + 在設計上，建議採用 ```find_package``` 搜尋對應目標庫與元件，避免直接指定目錄，依此來適應不同編譯主機與作業系統
+        + 
 
 ## 文獻探討
 
