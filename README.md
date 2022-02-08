@@ -143,6 +143,12 @@ ldd ./publish/bin/Application
 ```
 > 此命令，可列出執行檔案所需連結的函式庫
 
+### 交叉編譯器 ( Cross compiler )
+
++ [Cross Compiling With CMake](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Cross%20Compiling%20With%20CMake.html)
+    - [Cross Compile With CMake - Windows compiler on linux](https://www.incredibuild.com/blog/cross-compile-with-cmake)
+    - [Cross Compile files on x86 Linux host for 96Boards ARM systems](https://www.96boards.org/documentation/guides/crosscompile/commandline.html)
+
 ## 參考
 
 + [CMake](https://cmake.org/)
