@@ -14,6 +14,7 @@ C / C++ 編譯工具 CMake 練習專案。
         + [Visual Studio - MSBuild at Windows OS](/app/vs-win-console)
     - [Visual Studio - compile at WSL virtual machine](/app/vs-win-cmake-wsl)
     - [Visual Studio - compile at remote server](/app/vs-win-cmake-ssh)
+    - [ISSUE : GCC & LIBRARY ABI](/app/gcc-linux-abi)
 
 + [CMake demo code](/demo)
     - ```./run.sh project```：[code](/demo/src/project)，設定專案資訊
@@ -150,7 +151,7 @@ ldd ./publish/bin/Application
     - [Cross Compile With CMake - Windows compiler on linux](https://www.incredibuild.com/blog/cross-compile-with-cmake)
     - [Cross Compile files on x86 Linux host for 96Boards ARM systems](https://www.96boards.org/documentation/guides/crosscompile/commandline.html)
 
-範例程式如下
+範例程式如下：
 
 + [Windows 環境下編譯 linux x86, x64 專案庫](/app/gcc-cross-compile-cmake-linux)
 + [Windows 環境下編譯 linux arm64 專案庫](/app/gcc-cross-compile-cmake-arm)
