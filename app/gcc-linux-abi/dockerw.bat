@@ -115,7 +115,8 @@ goto end
     echo      --help, -h        Show more information with CLI.
     echo.
     echo Command:
-    echo      start             Start service.
+    echo      backward          Start backward service.
+    echo      upward          Start upward service.
     echo      into              Into service.
     echo      build             Build source code.
     echo.
@@ -123,33 +124,66 @@ goto end
     goto end
 )
 
-:: ------------------- Command "start" mathod -------------------
+:: ------------------- Command "backward" mathod -------------------
 
-:cli-start (
+:cli-backward (
     echo ^> Build image
     docker build --rm^
-        -t complier:%PROJECT_NAME%^
-        .
+        -t complier-backward:%PROJECT_NAME%^
+        .\conf\backward
 
     echo ^> Startup docker container instance
     docker rm -f complier-%PROJECT_NAME%
     docker run -d --rm^
-        -v %cd%/src/:/repo/^
+        -v %cd%/libs/:/repo/^
         --name complier-%PROJECT_NAME%^
-        complier:%PROJECT_NAME% tail -f /dev/null
+        complier-backward:%PROJECT_NAME% tail -f /dev/null
 
     goto end
 )
 
-:cli-start-args (
+:cli-backward-args (
     for %%p in (%*) do (
         if "%%p"=="--dev" ( set DEVELOPER=1 )
     )
     goto end
 )
 
-:cli-start-help (
-    echo Start service.
+:cli-backward-help (
+    echo Start backward service.
+    echo.
+    echo Options:
+    echo.
+    goto end
+)
+
+:: ------------------- Command "upward" mathod -------------------
+
+:cli-upward (
+    echo ^> Build image
+    docker build --rm^
+        -t complier-upward:%PROJECT_NAME%^
+        .\conf\upward
+
+    echo ^> Startup docker container instance
+    docker rm -f complier-%PROJECT_NAME%
+    docker run -d --rm^
+        -v %cd%/libs/:/repo/^
+        --name complier-%PROJECT_NAME%^
+        complier-upward:%PROJECT_NAME% tail -f /dev/null
+
+    goto end
+)
+
+:cli-upward-args (
+    for %%p in (%*) do (
+        if "%%p"=="--dev" ( set DEVELOPER=1 )
+    )
+    goto end
+)
+
+:cli-upward-help (
+    echo Start upward service.
     echo.
     echo Options:
     echo.

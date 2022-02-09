@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 # Install common tools
 RUN \
@@ -34,8 +34,9 @@ RUN \
 RUN \
     add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
     apt-get update -y && \
-    apt-get upgrade -y gcc-5 g++-5 && \
-    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5
+    apt-get install -y gcc-8 g++-8 && \
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5 && \
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 
 # Container setting
 WORKDIR /repo

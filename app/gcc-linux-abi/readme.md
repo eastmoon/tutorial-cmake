@@ -24,7 +24,8 @@
 + 啟用編譯服務主機
 
 ```
-dockerw start
+dockerw backward        // 啟用向下兼容 ( Ubuntu 1804 安裝 gcc 5 )
+dockerw upward          // 啟用向上兼容 ( Ubuntu 1604 更新 libstdc++6 )
 ```
 > 於 Windows 環境執行此指令
 
@@ -41,6 +42,21 @@ dockerw into
 dockerw build
 ```
 > 於 Windows 環境執行此指令
+
++ 顯示 GCC 相關資訊 ( 進入服務主機 )
+
+```
+./abi-info.sh
+```
+
++ 測試安裝與編譯套件 ( 進入服務主機 )
+
+```
+./install.sh
+```
+> + ```dockerw backward``` 容器可編譯
+> + ```dockerw upward``` 容器，在指定 gcc v8 ( ```update-alternatives --config gcc``` 切換 ) 可編譯
+> + ```dockerw upward``` 容器，在指定 gcc v5 ( ```update-alternatives --config gcc``` 切換 ) 無法編譯
 
 ## 指令說明
 
@@ -77,6 +93,7 @@ update-alternatives --display gcc
 + GCC 版本與 GLIBCXX 版本議題
       - [解决C/C++依赖库不兼容的问题](https://zzqcn.github.io/misc/clib-abi.html#ref4)
       - [ABI Policy and Guidelines](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)，文獻內附有 GCC 與 GLIBCXX 版本對照
+      - [C++ Standards Support in GCC](https://gcc.gnu.org/projects/cxx-status.html)
 + [how-to-install-latest-gcc-on-ubuntu-lts](https://gist.github.com/application2000/73fd6f4bf1be6600a2cf9f56315a2d91)
 + [Ubuntu 安裝 gcc/g++，gcc/g++ 多版本切換](https://shengyu7697.github.io/ubuntu-gcc/)
 + [update-alternatives︰管理指令和檔案的多個版本](https://documentation.suse.com/zh-tw/sles/15-GA/html/SLES-all/cha-update-alternative.html)
