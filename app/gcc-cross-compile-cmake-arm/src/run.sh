@@ -3,5 +3,5 @@ cmake -DBUILDSWIG=NO -DBUILDSWIGNODE=NO -DBUILDSWIGPYTHON=NO -DCMAKE_TOOLCHAIN_F
 make -C ./out
 echo ">> Execute example"
 echo ""
-./out/exec
+echo "Copy ./out/exec to ARM device and execute it"
 echo ""
