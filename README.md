@@ -9,6 +9,7 @@ C / C++ 編譯工具 CMake 練習專案。
 
 + CMake Project
     - [GCC - compile at linux server](/app/gcc-linux-cmake)
+    - [GCC - compile arm on x86](/app/gcc-linux-arm-cmake)
     - [Visual Studio - compile at Windows OS](/app/vs-win-cmake-win)
         + [Visual Studio - MSBuild at Windows OS](/app/vs-win-console)
     - [Visual Studio - compile at WSL virtual machine](/app/vs-win-cmake-wsl)
@@ -148,6 +149,12 @@ ldd ./publish/bin/Application
 + [Cross Compiling With CMake](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Cross%20Compiling%20With%20CMake.html)
     - [Cross Compile With CMake - Windows compiler on linux](https://www.incredibuild.com/blog/cross-compile-with-cmake)
     - [Cross Compile files on x86 Linux host for 96Boards ARM systems](https://www.96boards.org/documentation/guides/crosscompile/commandline.html)
+
+範例程式如下
+
++ [Windows 環境下編譯 linux x86, x64 專案庫](/app/gcc-cross-compile-cmake-linux)
++ [Windows 環境下編譯 linux arm64 專案庫](/app/gcc-cross-compile-cmake-arm)
++ [Linux 模擬環境下編譯 windows 專案庫](/app/gcc-cross-compile-cmake-win)
 
 ## 參考
 
