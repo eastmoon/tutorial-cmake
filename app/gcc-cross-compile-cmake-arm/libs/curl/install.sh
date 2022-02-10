@@ -38,7 +38,7 @@ cd ${root}
 # Compiler & Install
 tar xvf curl-7.47.0.tar.gz
 cd curl-7.47.0
-./configure --disable-shared --host=arm-linux --prefix=${prefix} --with-ssl=${prefix} --with-libssh2=${prefix} --with-zlib=${prefix} CC=aarch64-linux-gnu-gcc CFLAGS=-fPIC
+./configure --host=arm-linux --prefix=${prefix} --with-ssl=${prefix} --with-libssh2=${prefix} --with-zlib=${prefix} CC=aarch64-linux-gnu-gcc CFLAGS=-fPIC
 make -j4
 make install
 cd ${root}
