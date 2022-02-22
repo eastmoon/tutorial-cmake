@@ -150,6 +150,14 @@ ldd ./publish/bin/Application
 + [Cross Compiling With CMake](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Cross%20Compiling%20With%20CMake.html)
     - [Cross Compile With CMake - Windows compiler on linux](https://www.incredibuild.com/blog/cross-compile-with-cmake)
     - [Cross Compile files on x86 Linux host for 96Boards ARM systems](https://www.96boards.org/documentation/guides/crosscompile/commandline.html)
+    - [Cross-Compilation gnu.org](https://www.gnu.org/software/automake/manual/html_node/Cross_002dCompilation.html)
++ ISSUE
+    - [CMake: how to properly setup new toolchain to avoid "System is unknown to CMake" message?](https://stackoverflow.com/questions/24907916)
+    ```
+    CMAKE_SYSTEM_NAME:
+
+    this one is mandatory, it is the name of the target system, i.e. the same as CMAKE_SYSTEM_NAME would have if CMake would run on the target system. Typical examples are "Linux" and "Windows". This variable is used for constructing the file names of the platform files like Linux.cmake or Windows-gcc.cmake. If your target is an embedded system without OS set CMAKE_SYSTEM_NAME to "Generic". If CMAKE_SYSTEM_NAME is preset, the CMake variable CMAKE_CROSSCOMPILING is automatically set to TRUE, so this can be used for testing in the CMake files.
+    ```
 
 範例程式如下：
 

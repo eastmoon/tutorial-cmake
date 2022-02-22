@@ -42,3 +42,4 @@ dockerw build
 + [arm-linux-gnueabihf、aarch64-linux-gnu等ARM交叉编译GCC的区别](https://blog.csdn.net/Namcodream521/article/details/88379307)
 + [gcc編譯參數-fPIC的一些問題](https://jasonblog.github.io/note/linked_and_loader/gccbian_yi_can_6570-_fpic_de_yi_xie_wen_ti.html)
 + [gcc -ldl 选项作用](https://www.cnblogs.com/SZxiaochun/p/7718621.html)
++ [Check if a Library is 32-Bit or 64-Bit](https://www.baeldung.com/linux/check-library-32-or-64-bit)
