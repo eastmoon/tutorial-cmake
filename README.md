@@ -147,6 +147,9 @@ ldd ./publish/bin/Application
 
 ### 交叉編譯器 ( Cross compiler )
 
+![交叉編譯器示意](https://preshing.com/images/gcc-cross-compiler.png)
+> from [How to Build a GCC Cross-Compiler](https://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/)
+
 + [Cross Compiling With CMake](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Cross%20Compiling%20With%20CMake.html)
     - [Cross Compile With CMake - Windows compiler on linux](https://www.incredibuild.com/blog/cross-compile-with-cmake)
     - [Cross Compile files on x86 Linux host for 96Boards ARM systems](https://www.96boards.org/documentation/guides/crosscompile/commandline.html)
