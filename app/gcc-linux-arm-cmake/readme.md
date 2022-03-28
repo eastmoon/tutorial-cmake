@@ -45,8 +45,10 @@ qemu-system-aarch64 -machine virt -cpu cortex-a57 -machine type=virt -nographic 
 + [QEMU](https://www.qemu.org/docs/master/)
     - [Ubunut wiki - QEMU](https://wiki.ubuntu.com/ARM64/QEMU)
     - [QEMU ARM64 guide](https://www.cntofu.com/book/46/qemu/76.md)
+    - [cross compiler install](https://www.cntofu.com/book/46/toolchain/171.md)
 + Docker
     - [透過Qemu在X86機器上執行Pi](https://peihsinsu.gitbooks.io/docker-note-book/content/run_pi_over_qemu_on_x86.html)
     - [Github - docker-qemu](https://github.com/tianon/docker-qemu)
+    - [Github - dockcross](https://github.com/dockcross/dockcross)
 + Virtual Machine
     - [Run Ubuntu (Aarch64) on Ubuntu (x86–64) with QEMU](https://medium.com/@a24230928_45036/run-ubuntu-aarch64-on-ubuntu-x86-64-on-windows-10-with-qemu-7206eab0330c)
