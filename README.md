@@ -145,6 +145,12 @@ ldd ./publish/bin/Application
 ```
 > 此命令，可列出執行檔案所需連結的函式庫
 
++ 字符不合
+
+當完成編譯的程式在安裝至執行主機時出現問題 **GLIBCXX、GLIBC not found**，這是指編譯環境所使用的 C、CXX 函式庫與執行環境有落差，導致編譯內容使用錯誤版本的語法，而連結目標檔 ```libc.so```、```libstdc++.so``` 因為缺乏這些語法而執行失敗。
+
++ [ISSUE - glib](/app/issue-glib)
+
 ### 交叉編譯器 ( Cross compiler )
 
 ![交叉編譯器示意](https://preshing.com/images/gcc-cross-compiler.png)
